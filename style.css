@@ -1,18 +1,21 @@
-body {
-  min-height: 2000px;
-  /* background-color: #121212; */
+:root {
+  --bg-color: #e2edff;
 }
 
 .navbar-brand {
-  font-family: 'Dancing Script', cursive;
+  font-family: "Dancing Script", cursive;
   font-size: 1.8em;
 }
 
 .jumbotron {
-  padding-top: 2rem;
-  background-color: #e2edff;
+  padding-top: 6rem;
+  background-color: var(--bg-color);
 }
 
 #projects {
-  background-color: #e2edff;
+  background-color: var(--bg-color);
+}
+
+section {
+  padding-top: 5rem;
 }
