@@ -12,6 +12,14 @@
   background-color: var(--bg-color);
 }
 
+svg {
+  margin-bottom: -1px;
+}
+
+#about {
+  margin-top: -10px !important;
+}
+
 #projects {
   background-color: var(--bg-color);
 }
