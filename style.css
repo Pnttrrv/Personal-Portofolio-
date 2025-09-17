@@ -2,6 +2,10 @@
   --bg-color: #669bbc;
 }
 
+#about {
+  overflow-x: hidden;
+}
+
 .navbar-brand {
   font-family: "Dancing Script", cursive;
   font-size: 1.8em;
@@ -34,4 +38,8 @@ section {
 
 #gallery .row > * {
   padding: 0;
+}
+
+#contacts {
+  background-color: var(--bg-color);
 }
