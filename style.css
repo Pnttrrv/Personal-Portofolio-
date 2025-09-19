@@ -2,10 +2,6 @@
   --bg-color: #669bbc;
 }
 
-#about {
-  overflow-x: hidden;
-}
-
 .navbar-brand {
   font-family: "Dancing Script", cursive;
   font-size: 1.8em;
@@ -42,4 +38,97 @@ section {
 
 #contacts {
   background-color: var(--bg-color);
+}
+
+/* cats section */
+.cat-box {
+  position: relative;
+  background-color: #003049;
+  border-radius: 10px;
+  height: 500px;
+  transition: all 0.5s;
+  transform-style: preserve-3d;
+}
+
+.cat-box::before {
+  content: "My";
+  position: absolute;
+  color: #fff;
+  font-size: 6em;
+  font-weight: bold;
+  font-style: italic;
+  right: 20%;
+  top: 30px;
+  opacity: 0;
+  transition: all 0.5s;
+}
+
+.cat-box::after {
+  content: "Cat";
+  position: absolute;
+  color: #fff;
+  font-size: 6em;
+  font-weight: bold;
+  font-style: italic;
+  top: 350px;
+  left: 20%;
+  opacity: 0;
+  transition: all 0.5s;
+}
+
+.cat-box:hover::before,
+.cat-box:hover::after {
+  left: 50%;
+  opacity: 0.5;
+  transform: translate(-50%, 0);
+}
+
+.cat-name {
+  position: absolute;
+  font-size: 2em;
+  color: #fff;
+  text-align: center;
+  width: 100%;
+  top: -20px;
+  opacity: 0;
+  transform: translate3d(0, 0, 50px);
+  transition: 0.5s;
+}
+
+.cat-box:hover h4 {
+  opacity: 1;
+  top: 10px;
+}
+
+.cat-box .story-btn {
+  position: absolute;
+  bottom: -20px;
+  left: 50%;
+  transform: translate3d(-50%, 0, 100px);
+  opacity: 0;
+  transition: all 0.5s;
+}
+
+.cat-box:hover .story-btn {
+  opacity: 1;
+  bottom: 10px;
+}
+
+.tilt {
+  transform-style: preserve-3d;
+}
+
+.cat-box .img-cat {
+  max-width: 350px;
+  position: absolute;
+  left: 50%;
+  top: 49%;
+  transform: translate3d(-50%, -49%, 80px);
+  transition: all 0.5s;
+  filter: grayscale(100%);
+}
+
+.cat-box:hover .img-cat {
+  transform: translate3d(-50%, -49%, 80px) scale(1.2);
+  filter: grayscale(0);
 }

@@ -75,6 +75,7 @@
         alt="mylogo"
         width="200"
         class="rounded-circle img-thumbnail"
+        data-tilt
       />
       <h1 class="display-4">Andhika Putra</h1>
       <p class="lead"></p>
@@ -221,6 +222,38 @@
           </div>
         </div>
       </div>
+      <section id="my-cats">
+        <div class="container">
+          <div class="row text-center mb-3">
+            <div class="col">
+              <h2>My Cats</h2>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6 col-lg-4 mb-3 tilt">
+              <div class="cat-box">
+                <h4 class="cat-name">Chiko</h4>
+                <img src="img/cat1.png" alt="cats" class="img-cat" />
+                <a href="#" class="btn btn-light story-btn">Story</a>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-4 mb-3 tilt">
+              <div class="cat-box">
+                <h4 class="cat-name">Chiko</h4>
+                <img src="img/cat1.png" alt="cats" class="img-cat" />
+                <a href="#" class="btn btn-light story-btn">Story</a>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-4 mb-3 tilt">
+              <div class="cat-box">
+                <h4 class="cat-name">Chiko</h4>
+                <img src="img/cat1.png" alt="cats" class="img-cat" />
+                <a href="#" class="btn btn-light story-btn">Story</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
         <path
           fill="#fff"
@@ -229,6 +262,8 @@
         ></path>
       </svg>
     </section>
+    <!-- end projects -->
+
     <!-- gallery -->
     <section id="gallery">
       <div class="container mb-4">
@@ -490,13 +525,31 @@
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
       const galleryImages = document.querySelectorAll(".gallery-img");
+      const myCats = document.querySelectorAll(".cat-box");
+
       galleryImages.forEach((img, i) => {
         img.dataset.aos = "fade-down";
         img.dataset.aosDelay = i * 100;
       });
+
+      myCats.forEach((cat, i) => {
+        cat.dataset.aos = "zoom-in";
+        cat.dataset.aosDelay = i * 100;
+      });
+
       AOS.init({
         once: true,
         duration: 1000,
+      });
+    </script>
+
+    <!-- tilt js -->
+    <script src="vanilla-tilt.js"></script>
+    <script>
+      VanillaTilt.init(document.querySelectorAll(".cat-box"), {
+        max: 25,
+        speed: 100,
+        glare: true,
       });
     </script>
   </body>
