@@ -75,7 +75,6 @@
         alt="mylogo"
         width="200"
         class="rounded-circle img-thumbnail"
-        data-tilt
       />
       <h1 class="display-4">Andhika Putra</h1>
       <p class="lead"></p>
@@ -230,21 +229,21 @@
             </div>
           </div>
           <div class="row">
-            <div class="col-md-6 col-lg-4 mb-3 tilt">
+            <div class="col-md-6 col-lg-4 mb-3 tilt rounded-4">
               <div class="cat-box">
                 <h4 class="cat-name">Chiko</h4>
                 <img src="img/cat1.png" alt="cats" class="img-cat" />
                 <a href="#" class="btn btn-light story-btn">Story</a>
               </div>
             </div>
-            <div class="col-md-6 col-lg-4 mb-3 tilt">
+            <div class="col-md-6 col-lg-4 mb-3 tilt rounded-4">
               <div class="cat-box">
                 <h4 class="cat-name">Chiko</h4>
                 <img src="img/cat1.png" alt="cats" class="img-cat" />
                 <a href="#" class="btn btn-light story-btn">Story</a>
               </div>
             </div>
-            <div class="col-md-6 col-lg-4 mb-3 tilt">
+            <div class="col-md-6 col-lg-4 mb-3 tilt rounded-4">
               <div class="cat-box">
                 <h4 class="cat-name">Chiko</h4>
                 <img src="img/cat1.png" alt="cats" class="img-cat" />
@@ -453,7 +452,13 @@
     <footer class="text-center pb-5" style="background-color: #003049">
       <p class="text-white fw-bold">
         Created with <i class="bi bi-heartbreak-fill text-danger"></i>
-        <a href="#" class="text-white" style="text-decoration: none">Pnttrrv</a>
+        <a
+          href="https://x.com/pnttrrv"
+          class="text-white"
+          style="text-decoration: none"
+          target="_blank"
+          >Pnttrrv</a
+        >
       </p>
     </footer>
     <script
@@ -546,10 +551,13 @@
     <!-- tilt js -->
     <script src="vanilla-tilt.js"></script>
     <script>
-      VanillaTilt.init(document.querySelectorAll(".cat-box"), {
+      VanillaTilt.init(document.querySelectorAll(".tilt"), {
+        max: 25,
+        speed: 400,
+      });
+      VanillaTilt.init(document.querySelector(".img-thumbnail"), {
         max: 25,
         speed: 100,
-        glare: true,
       });
     </script>
   </body>
